@@ -1,0 +1,21 @@
+{
+    onEventGroovyCode: "gel.groovy",
+    disableSynchronization: true,
+    GlobalEventsPlugin__start: true,
+    GlobalEventsPlugin__stop: true,
+    RunListener__onStarted: false,
+    RunListener__onCompleted: false,
+    RunListener__onFinalized: true,
+    RunListener__onDeleted: false,
+    ComputerListener__onLaunchFailure: false,
+    ComputerListener__onOnline: false,
+    ComputerListener__onOffline: false,
+    ComputerListener__onTemporarilyOnline: false,
+    ComputerListener__onTemporarilyOffline: false,
+    QueueListener__onEnterWaiting: false,
+    QueueListener__onEnterBlocked: false,
+    QueueListener__onEnterBuildable: false,
+    QueueListener__onLeft: false,
+    scheduleTime: 0,
+    classPath: "src/test/resources"
+}
