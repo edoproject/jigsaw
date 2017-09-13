@@ -1,0 +1,36 @@
+{
+  "noCausesMessage": "No problems were identified. If you know why this problem occurred, please add a suitable Cause for it.",
+  "globalEnabled": true,
+  "doNotAnalyzeAbortedJob": false,
+  "gerritTriggerEnabled": true,
+  "graphsEnabled": false,
+  "testResultParsingEnabled": true,
+  "testResultCategories": "",
+  "maxLogSize": 0,
+  "nrOfScanThreads": 3,
+  "minimumNumberOfWorkerThreads": 1,
+  "maximumNumberOfWorkerThreads": 1,
+  "threadKeepAliveTime": 15,
+  "waitForJobShutdownTime": 30,
+  "corePoolNumberOfThreads": 5,
+  "convertOldKb": true,
+  "knowledgeBase": {
+    "$class": "com.jigsaw.utilities.kb.SimpleKnowledgeBase",
+    initialCauses: [
+      {
+        "$class": "com.sonyericsson.jenkins.plugins.bfa.model.FailureCause",
+        id: "0001",
+        name: "aa",
+        description: "aaa",
+        comment: "blabla",
+        lastOccurred: {
+          "$class": "com.jigsaw.utilities.kb.SimpleDate"
+        },
+        categories: "",
+        indications: [],
+        modifications: []
+      }
+    ]
+  }
+}
+
