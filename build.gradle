@@ -112,7 +112,8 @@ test {
 task downloadMultipleFiles(type: de.undercouch.gradle.tasks.download.Download) {
     src([
             'http://updates.jenkins-ci.org/latest/build-failure-analyzer.hpi',
-            'http://updates.jenkins-ci.org/latest/groovy-events-listener-plugin.hpi'
+            'http://updates.jenkins-ci.org/latest/groovy-events-listener-plugin.hpi',
+            'http://updates.jenkins-ci.org/latest/gerrit-trigger.hpi'
     ])
     //dest new File('target/jenkins-for-test/WEB-INF/plugins/.')
     dest new File(buildDir, 'resources/test/plugins/.')

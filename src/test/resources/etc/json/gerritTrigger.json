@@ -1,0 +1,63 @@
+{
+  "gerritHostName": "gerrit.domain.name",
+  "gerritFrontEndUrl": "https://gerrit.domain.name/",
+  "gerritSshPort": 12345,
+  "gerritUserName": "some-bot",
+  "gerritAuthKeyFile": "secrets/gerrit-auth.key",
+  "gerritAuthKeyFilePassword": "",
+  "buildCurrentPatchesOnly": {
+    "abortNewPatchsets": false,
+    "abortManualPatchsets": false
+  },
+  "gerritBuildStartedVerifiedValue": 0,
+  "gerritBuildSuccessfulVerifiedValue": 1,
+  "gerritBuildFailedVerifiedValue": -1,
+  "gerritBuildUnstableVerifiedValue": -1,
+  "gerritBuildNotBuiltVerifiedValue": 0,
+  "gerritBuildStartedCodeReviewValue": 0,
+  "gerritBuildSuccessfulCodeReviewValue": 0,
+  "gerritBuildFailedCodeReviewValue": 0,
+  "gerritBuildUnstableCodeReviewValue": 0,
+  "gerritBuildNotBuiltCodeReviewValue": 0,
+  "buildScheduleDelay": 0,
+  "dynamicConfigRefreshInterval": 1200,
+  "enableProjectAutoCompletion": false,
+  "notificationLevel": "NONE",
+  "verdictCategories": [
+    {
+      "verdictValue": "CRVW",
+      "verdictDescription": "Code Review"
+    },
+    {
+      "verdictValue": "VRIF",
+      "verdictDescription": "Verified"
+    }
+  ],
+  "enableReplication": {
+    "slaves": [
+      {
+        "id": "primary-slave-id",
+        "name": "primary_name",
+        "host": "primary_host",
+        "timeout": 1000
+      },
+      {
+        "id": "secondary-slave-id",
+        "name": "secondary_name",
+        "host": "secondary_host",
+        "timeout": 1000
+      }
+    ],
+    "enableSlaveSelectionInJobs": {
+      "defaultSlaveId": "primary-slave-id"
+    }
+  },
+  "aggregateJobStartedInterval": 15,
+  "keyFile": "gerrit.key",
+  "gerritAuthKeyFile": "secrets/gerrit-auth.key",
+  "gerritVerifiedCmdBuildStarted": "gerrit_not_default review <CHANGE>,<PATCHSET> --message 'Build Started <BUILDURL> <STARTED_STATS>' --verified <VERIFIED> --code-review <CODE_REVIEW> --label WaitForVerification=-1 --notify NONE",
+  "gerritVerifiedCmdBuildFailed": "gerrit_not_default review <CHANGE>,<PATCHSET> --message 'Build Successful <BUILDS_STATS>' --verified <VERIFIED> --code-review <CODE_REVIEW> --label WaitForVerification=-0 --notify OWNER",
+  "gerritVerifiedCmdBuildSuccessful": "gerrit_not_default review <CHANGE>,<PATCHSET> --message 'Build Failed <BUILDS_STATS>' --verified <VERIFIED> --code-review <CODE_REVIEW> --label WaitForVerification=-0 --notify OWNER",
+  "gerritVerifiedCmdBuildUnstable": "gerrit_not_default review <CHANGE>,<PATCHSET> --message 'Build Unstable <BUILDS_STATS>' --verified <VERIFIED> --code-review <CODE_REVIEW> --label WaitForVerification=-0 --notify OWNER",
+  "gerritVerifiedCmdBuildNotBuilt": "gerrit_not_default review <CHANGE>,<PATCHSET> --message 'No Builds Executed <BUILDS_STATS>' --verified <VERIFIED> --code-review <CODE_REVIEW> --label WaitForVerification=-0 --notify OWNER"
+}
